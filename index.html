@@ -11,14 +11,32 @@
 <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
 <script src="script.js"></script>
 
+<script type="text/javascript">
+function start() {
+  document.getElementById('menu1').style.display="block";
+  document.getElementById('menu2').style.display="none";
+  document.getElementById('sidebar').style.display="none";
+  document.getElementById('email').display="none";
+}
+</script>
+
 <body onload="start()">
-  <div id="nav">
-    <img onclick="disimg1()" id="menu1" src="img/menu1.png"/>
-    <img onclick="disimg2()" id="menu2" src="img/menu2.png"/>
+  <img onclick="disimg1()" id="menu1" src="img/menu1.png"/>
     <div id="sidebar">
-      <p id="email"><a href="http://www.teamagnt.com/mail">Email Login</a></p>
+      <table>
+        <tr>
+          <td>
+            <img onclick="disimg2()" id="menu2" src=""/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p id="email" align="center"><a href="http://www.teamagnt.com/mail">Email Login</a></p>
+          </td>
+        </tr>
+      </table>
     </div>
-  </div>
+
       <img class="img_bg" src="bg.png" alt="logo"/>
     <div class="icons" align="center">
       <a href="https://twitter.com/TeamAgnT">
@@ -36,6 +54,7 @@
       <a href="https://www.fb.com/teamagnt">
         <img class="fb_icon" src="img/fb_icon.png" alt="fb"/>
       </a>
+        <img class="tatext" src="img/tatext.png" alt="teamagnt"/>
     </div>
     <div class="text" align="center">
         Reach us out through social media!!
@@ -44,7 +63,7 @@
     <iframe class="youtubevid" src="https://www.youtube.com/embed/kSDCl7IYhHs" frameborder="0" allowfullscreen></iframe>
 
     <div id="footer" align="center">
-      All Rights Reserved!! 2016
+      Copyright &copy; 2016 All Rights Reserved.
     </div>
 </body>
 </html>

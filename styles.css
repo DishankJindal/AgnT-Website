@@ -2,40 +2,38 @@
 /* common for all */
 @media only screen
   and (orientation: portrait){
-body{
-  position: absolute;
-  height:100vh;
-  width: 100vw;
-  margin: 0 auto;
-}
-    #nav{
-      display: block;
-      position: relative;
-      top: 0;
 
-      margin-bottom: 2vh;
-      background-color: #ccc;
+    body{
+      position: absolute;
+      height:100vh;
       width: 100vw;
-      height: 10vh;
+      margin: 0 auto;
     }
 
     #menu1, #menu2{
+      position: absolute;
       float: left;
-      width: 10vw;
-      margin-left: 2vw;
-      margin-top: 1.1vh;
-    }
-
-    #email {
-      display: inline;
-      float: left;
+      width: 10vmin;
+      margin-left: 2vmax;
+      margin-top: 2vmax;
     }
 
     #sidebar {
-      height: 50vh;
-      width: 50vw;
+      display: none;
+      position: fixed;
+      height: 50vmax;
+      width: 50vmin;
       background-color: #ccc;
-      z-index: 888;
+      z-index: 999;
+    }
+
+    #email {
+      display: block;
+
+      margin-top: 15vmax;
+      margin-left: 5vmax;
+      font-size: 5vmin;
+      font-weight: bold;
     }
 
     .img_bg {
@@ -44,6 +42,7 @@ body{
       height: auto;
 
       margin: 0 auto;
+      margin-top: 5vh;
     }
 
     .icons{
@@ -56,9 +55,13 @@ body{
       margin-left: 1vw;
     }
 
+    .tatext {
+      display: none;
+    }
+
     .text {
       display: block;
-      font-size: 5vw;
+      font-size: 5vmax;
       font-weight: bold;
       font-family: fantasy;
     }
@@ -66,14 +69,13 @@ body{
     #footer{
       position: relative;
       bottom: 0;
+      left: 0;
       width: 100vw;
       background-color: #ba1;
 
       margin-top: 5vh;
-      padding-top: 1%;
-      padding-bottom: 1%;
+      padding: 1vmin 0;
     }
-  }
 
   .youtubevid{
      display: block;
@@ -83,11 +85,81 @@ body{
      width: 80vw;
      height: auto;
   }
+}
 
   @media only screen
     and (orientation: landscape){
-      *{
+
+      #nav, #menu1, #menu2, #email, #sidebar, .img_bg, .icons, .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon, .text, #footer, .youtubevid{
         display: none;
       }
+
+      body {
+        background: url("bg_desktop.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      #menu1, #menu2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: left;
+        width: 10vmin;
+        margin-left: 2vmax;
+        margin-top: 2vmax;
+      }
+
+      #sidebar {
+        display: none;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 50vmin;
+        height: 100vh;
+        background-color: #ccc;
+        z-index: 999;
+      }
+
+      #email {
+        display: block;
+
+        margin-top: 15vmax;
+        margin-left: 5vmax;
+        font-size: 5vmin;
+        font-weight: bold;
+      }
+
+      .icons{
+        display: block;
+        margin-top: 40vh;
+        margin-left: 75vh;
+      }
+
+      .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon{
+        display: inline;
+        width: 8vmin;
+        margin-left: 1vmin;
+      }
+
+      .tatext {
+        display: block;
+        width: 20vmax;
+      }
+
+      #footer{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #ba1;
+
+        margin-top: 5vh;
+        padding: 1vmin 0;
+      }
+
 }
 /* ends */
