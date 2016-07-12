@@ -1,0 +1,93 @@
+
+/* common for all */
+@media only screen
+  and (orientation: portrait){
+body{
+  position: absolute;
+  height:100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+    #nav{
+      display: block;
+      position: relative;
+      top: 0;
+
+      margin-bottom: 2vh;
+      background-color: #ccc;
+      width: 100vw;
+      height: 10vh;
+    }
+
+    #menu1, #menu2{
+      float: left;
+      width: 10vw;
+      margin-left: 2vw;
+      margin-top: 1.1vh;
+    }
+
+    #email {
+      display: inline;
+      float: left;
+    }
+
+    #sidebar {
+      height: 50vh;
+      width: 50vw;
+      background-color: #ccc;
+      z-index: 888;
+    }
+
+    .img_bg {
+      display: block;
+      width: 90vw;
+      height: auto;
+
+      margin: 0 auto;
+    }
+
+    .icons{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon{
+      width: 10vw;
+      margin-left: 1vw;
+    }
+
+    .text {
+      display: block;
+      font-size: 5vw;
+      font-weight: bold;
+      font-family: fantasy;
+    }
+
+    #footer{
+      position: relative;
+      bottom: 0;
+      width: 100vw;
+      background-color: #ba1;
+
+      margin-top: 5vh;
+      padding-top: 1%;
+      padding-bottom: 1%;
+    }
+  }
+
+  .youtubevid{
+     display: block;
+     margin: 0 auto;
+     margin-top: 5vh;
+
+     width: 80vw;
+     height: auto;
+  }
+
+  @media only screen
+    and (orientation: landscape){
+      *{
+        display: none;
+      }
+}
+/* ends */
