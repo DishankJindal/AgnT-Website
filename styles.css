@@ -1,3 +1,12 @@
+	a {
+	  color:#000;
+	  text-decoration:none;
+	}
+
+	a:hover {
+	  color:#09f;
+		text-decoration: underline;
+	}
 
 /* common for all */
 @media only screen
@@ -21,11 +30,23 @@
     #sidebar {
       display: none;
       position: fixed;
+			top: 0;
+			left: 0;
       height: 50vmax;
       width: 50vmin;
       background-color: #ccc;
       z-index: 999;
+			animation: pulse 1s;
     }
+
+		@keyframes pulse {
+			0% {
+				width: 0vmin;
+			}
+			100% {
+				width: 50vmin;
+			}
+		}
 
     #email {
       display: block;
@@ -61,7 +82,7 @@
 
     .text {
       display: block;
-      font-size: 5vmax;
+      font-size: 5vmin;
       font-weight: bold;
       font-family: fantasy;
     }
@@ -121,7 +142,17 @@
         height: 100vh;
         background-color: #ccc;
         z-index: 999;
+				animation: pulse 1s;
       }
+
+			@keyframes pulse {
+				0% {
+					width: 0vmin;
+				}
+				100% {
+					width: 50vmin;
+				}
+			}
 
       #email {
         display: block;
@@ -144,6 +175,23 @@
         margin-left: 1vmin;
       }
 
+			.tw_icon:hover, .ig_icon:hover, .sc_icon:hover, .yt_icon:hover, .fb_icon:hover{
+				animation: icons 1s linear 1s infinite alternate;
+				box-shadow: 10px 10px 5px grey;
+				transform: scale(1.1);
+			}
+
+			@keyframes icons {
+				0%{
+					transform: rotate(0deg) scale(1.1);
+				}
+				50%{
+					transform: rotate(30deg) scale(1.1);
+				}
+				100%{
+					transform: rotate(-30deg) scale(1.1);
+				}
+			}
       .tatext {
         display: block;
         width: 20vmax;
