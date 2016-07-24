@@ -1,0 +1,134 @@
+	a {
+	  color:#fff;
+	  text-decoration:none;
+	}
+
+	a:hover {
+	  color:#ff0;
+	}
+
+	body {
+		background-color: #000;
+		font-family: roboto;
+		color: #fff;
+	}
+
+	#infoBar {
+		position: absolute;
+		top: 0; right: 0;
+		text-align: right;
+		padding: 5px;
+		font-weight: lighter;
+		opacity: 0.75;
+		font-size: 1.2vmax;
+	}
+
+	#footer{
+		display: block;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		background-color: #039BE5;
+
+		margin-top: 5vh;
+		padding: 1vmin 0;
+	}
+
+/* common for all */
+@media only screen
+  and (orientation: portrait){
+
+    body{
+      position: absolute;
+      height:100vh;
+      width: 100vw;
+      margin: 0 auto;
+			background-color: #000;
+    }
+
+
+    .img_bg {
+      display: block;
+      width: 90vw;
+      height: auto;
+
+      margin: 0 auto;
+      margin-top: 5vh;
+    }
+
+    .icons{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon{
+      width: 10vw;
+      margin-left: 1vw;
+    }
+
+    .tatext {
+      display: none;
+    }
+
+    .text {
+      display: block;
+      font-size: 5vmin;
+      font-weight: bold;
+    }
+
+  .youtubevid{
+     display: block;
+     margin: 0 auto;
+     margin-top: 5vh;
+
+     width: 80vw;
+     height: auto;
+  }
+}
+
+  @media only screen
+    and (orientation: landscape){
+
+      #nav, #menu1, #menu2, #email, #sidebar, .img_bg, .icons, .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon, .text, #footer, .youtubevid{
+        display: none;
+      }
+
+      body {
+        background: url("bg_desktop.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+				background-color: #000;
+      }
+
+      .icons{
+        display: block;
+        margin-top: 30vh;
+      }
+
+      .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon{
+        display: inline;
+        width: 8vmin;
+        margin-left: 1vmin;
+      }
+
+			.tw_icon:hover, .ig_icon:hover, .sc_icon:hover, .yt_icon:hover, .fb_icon:hover{
+				transform: scale(1.1);
+			}
+
+      #footer{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background-color: #039BE5;
+
+        margin-top: 5vh;
+        padding: 1vmin 0;
+      }
+
+}
+/* ends */

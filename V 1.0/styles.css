@@ -5,8 +5,8 @@
 
 	a:hover {
 	  color:#09f;
+		text-decoration: underline;
 	}
-
 
 /* common for all */
 @media only screen
@@ -17,6 +17,14 @@
       height:100vh;
       width: 100vw;
       margin: 0 auto;
+    }
+
+    #menu1, #menu2{
+      position: absolute;
+      float: left;
+      width: 10vmin;
+      margin-left: 2vmax;
+      margin-top: 2vmax;
     }
 
     #sidebar {
@@ -38,26 +46,6 @@
 			100% {
 				width: 50vmin;
 			}
-		}
-
-		#menu1{
-			position: absolute;
-			top: 0;
-			left: 0;
-			float: left;
-			width: 10vmin;
-			margin-left: 2vmax;
-			margin-top: 2vmax;
-		}
-
-		#menu2 {
-			position: absolute;
-			top: 0;
-			left: 0;
-			float: left;
-			width: 10vmin;
-			margin-left: 2vmax;
-			margin-top: 2vmax;
 		}
 
     #email {
@@ -84,7 +72,6 @@
     }
 
     .tw_icon, .ig_icon, .sc_icon, .yt_icon, .fb_icon{
-			display: inline;
       width: 10vw;
       margin-left: 1vw;
     }
@@ -136,7 +123,18 @@
         background-size: cover;
       }
 
+      #menu1, #menu2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: left;
+        width: 10vmin;
+        margin-left: 2vmax;
+        margin-top: 2vmax;
+      }
+
       #sidebar {
+        display: none;
         position: fixed;
         top:0;
         left: 0;
@@ -144,10 +142,10 @@
         height: 100vh;
         background-color: #ccc;
         z-index: 999;
-				animation: sidebar 0.5s linear;
+				animation: pulse 1s;
       }
 
-			@keyframes sidebar {
+			@keyframes pulse {
 				0% {
 					width: 0vmin;
 				}
@@ -155,80 +153,15 @@
 					width: 50vmin;
 				}
 			}
-
-			@keyframes sidebarend {
-				0% {
-					width: 50vmin;
-				}
-				100% {
-					width: 0vmin;
-				}
-			}
-
-			#menu1 {
-				position: absolute;
-				top: 0;
-				left: 0;
-				float: left;
-				width: 10vmin;
-				height: 10vmin;
-				margin-left: 2vmax;
-				margin-top: 2vmax;
-				background: url("img/menuicon.gif") -152px 0;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-			}
-
-
-			#menu2 {
-				position: absolute;
-				top: 0;
-				left: 0;
-				float: left;
-				width: 10vmin;
-				height: 10vmin;
-				margin-left: 52vmax;
-				margin-top: 2vmax;
-				background: url("img/menuicon.gif") -152px 0;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-				animation: menu2 0.5s linear;
-			}
-
-			@keyframes menu2 {
-				0% {
-					margin-left: 2vmin;
-				}
-				100% {
-					margin-left: 52vmin;
-				}
-			}
-
 
       #email {
+        display: block;
+
         margin-top: 15vmax;
         margin-left: 5vmax;
         font-size: 5vmin;
         font-weight: bold;
-				opacity: 1;
-				animation: email 0.5s linear;
       }
-
-			@keyframes email {
-				0%{
-					opacity: 0;
-				}
-				90%{
-					opacity: 0;
-				}
-				100%{
-					opacity: 1;
-				}
-			}
 
       .icons{
         display: block;
@@ -243,9 +176,9 @@
       }
 
 			.tw_icon:hover, .ig_icon:hover, .sc_icon:hover, .yt_icon:hover, .fb_icon:hover{
-				box-shadow: 5px 5px 5px grey;
-				transform: scale(1.1);
 				animation: icons 1s linear 1s infinite alternate;
+				box-shadow: 10px 10px 5px grey;
+				transform: scale(1.1);
 			}
 
 			@keyframes icons {
@@ -259,12 +192,10 @@
 					transform: rotate(-30deg) scale(1.1);
 				}
 			}
-
       .tatext {
         display: block;
         width: 20vmax;
       }
-
 
       #footer{
         display: block;
@@ -277,5 +208,6 @@
         margin-top: 5vh;
         padding: 1vmin 0;
       }
+
 }
 /* ends */
